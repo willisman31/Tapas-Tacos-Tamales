@@ -8,12 +8,13 @@ Date: 6.3.2022
 
 class Game:
 
-    def Game(self):
+    def Game(self) -> none:
         pass
 
-    def play():
+    def play() -> none:
         pass
 
     def isWon() -> bool:
         pass
+
 
