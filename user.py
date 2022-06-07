@@ -9,20 +9,21 @@ Tic Tac Toe user or player with known behaviors of every user; may be extended b
 
 class User:
 
-    def User(self, symbol: char, name: str) -> none:
+    def __init__(self, symbol: str, name: str, board: Board) -> None:
         self.symbol = playSymbol
         self.name = name
+        self.board = board
 
-    def getSymbol(self) -> char:
+    def getSymbol(self) -> str:
         return self.symbol
 
-    def setSymbol(self, playSymbol: char) -> none:
+    def setSymbol(self, playSymbol: str) -> None:
         self.symbol = playSymbol
 
     def getName(self) -> str:
         return self.name
 
-    def setName(self, newName: str) -> none:
+    def setName(self, newName: str) -> None:
         self.name = newName
 
 
