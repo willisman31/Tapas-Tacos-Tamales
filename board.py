@@ -35,4 +35,10 @@ class Board:
     def getFieldValue(self, row, column) -> str:
         return self.gameBoard[row][column]
 
+    def getNumberOfRows(self) -> int:
+        return self.numberOfRows
+
+    def getNumberOfColumns(self) -> int:
+        return self.numberOfColumns
+
 
