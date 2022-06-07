@@ -21,7 +21,7 @@ class Board:
             for row in range(self.numberOfRows * 2 - 1):
                 if row % 2 == 1:
                     if column % 2 == 1:
-                        display += " "
+                        display += self.getFieldValue(row, column)
                     else:
                         display += "|"
                 else:
