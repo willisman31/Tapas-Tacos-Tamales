@@ -26,5 +26,22 @@ class User:
     def setName(self, newName: str) -> None:
         self.name = newName
 
+    def choosePosition(self, row: int, column: int) -> bool:
+        legal = self.isLegalPosition(row, column)
+        wasSuccessful = false
+        if legal:
+            self.board[row][column] = self.getSymbol()
+            wasSuccessful = true
+        return wasSuccessful
+
+    def isLegalPosition(self, row: int, column: int) -> bool:
+        return self.isInLegalRange(row, column) and self.isFreeSpace(row, column)
+
+    def isInLegalRange(self, row: int, column: int) -> bool:
+        return row < self.getNumberOfRows and column < self.getNumberOfColumns
+
+    def isFreeSpace(self, row: int, column: int) -> bool:
+        return self.board[row][column] == " "
+
 
 
