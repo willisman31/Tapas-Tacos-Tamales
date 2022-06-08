@@ -8,8 +8,8 @@ Date: 6.3.2022
 
 class Game:
 
-    def Game(self) -> none:
-        pass
+    def __init__(self) -> none:
+        board = Board
 
     def play() -> none:
         pass
