@@ -8,5 +8,7 @@ Date: 6.2.2022
 Launches Tic-Tac-Toe program
 """
 
-play()
+import game
+
+game.play()
 

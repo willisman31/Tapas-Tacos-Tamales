@@ -6,16 +6,17 @@ Date: 6.3.2022
 
 """
 
+import user, board
+
 class Game:
 
-    
     symbolOptions = ["x", "o", "t", "l", "w", "r"]
 
     def __init__(self, numberOfRows: int, numberOfColumns: int, numberOfUsers: int) -> None:
         self.board = Board(numberOfRows, numberOfColumns)
         self.users = self.initializeUsers(numberOfUsers, board)
 
-    def initializeUsers(self, numberOfUsers: int, board: Board) -> User[]:
+    def initializeUsers(self, numberOfUsers: int, board: Board) -> User[int]:
         users = []
         for user in range(numberOfUsers):
             symbol = symbolOptions[numberOfUsers]
@@ -26,10 +27,13 @@ class Game:
     def play() -> None:
         pass
 
-    def isWon() -> bool:
-        pass
+    def isWon(self) -> bool:
+        return self.numberInARow() == self.board.winningNumber()
 
     def getNumberOfUsers(self) -> int:
         return self.users.length
+
+    def winningNumber(self) -> int:
+        return 0
 
 

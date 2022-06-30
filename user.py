@@ -7,12 +7,14 @@ Date: 6.3.2022
 Tic Tac Toe user or player with known behaviors of every user; may be extended by other classes for automation of gameplay.
 """
 
+import board
+
 class User:
 
     def __init__(self, symbol: str, name: str, board: Board) -> None:
         self.symbol = playSymbol
         self.name = name
-        self.board = board
+        self.board = gameBoard
 
     def getSymbol(self) -> str:
         return self.symbol
