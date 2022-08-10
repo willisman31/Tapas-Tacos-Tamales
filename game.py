@@ -16,16 +16,17 @@ class Game:
         self.board = Board(numberOfRows, numberOfColumns)
         self.users = self.initializeUsers(numberOfUsers, board)
 
-    def initializeUsers(self, numberOfUsers: int, board: Board) -> User[int]:
+    def initializeUsers(self, numberOfUsers: int) -> user:
         users = []
         for user in range(numberOfUsers):
             symbol = symbolOptions[numberOfUsers]
             defaultUserName = "User " + str(user + 1)
-            users.append(User(defaultUserName, board, symbol))
+            users.append(User(defaultUserName, self.board, symbol))
         return users
 
     def play() -> None:
-        pass
+        while(!self.isWon()):
+            pass
 
     def isWon(self) -> bool:
         return self.numberInARow() == self.board.winningNumber()
