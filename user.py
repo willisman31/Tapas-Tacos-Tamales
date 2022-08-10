@@ -11,10 +11,10 @@ import board
 
 class User:
 
-    def __init__(self, symbol: str, name: str, board: Board) -> None:
-        self.symbol = playSymbol
+    def __init__(self, symbol: str, name: str, numberOfRows:int, numberOfColumns: int) -> None:
+        self.symbol = symbol
         self.name = name
-        self.board = gameBoard
+        self.board = Board(numberOfRows, numberOfColumns)
 
     def getSymbol(self) -> str:
         return self.symbol
